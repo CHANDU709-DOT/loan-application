@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+/*-------------------------------------*/
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.wrapper1{ 
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-20%,-20%);
+}
+
+.wrapper1 .navbar{
+  background: white;
+  display: grid;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wrapper1 .navbar ul li a{
+  color: #644def;
+}
+
+.wrapper1 .navbar .left ul,
+.wrapper1 .navbar .right ul li a{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.wrapper1 .navbar .left ul li,
+.wrapper1 .navbar .right img{
+  margin: 0 10px;
+}
+
+.wrapper1 .navbar .right a{
+  text-align: right;
+}
+
+.wrapper1 .navbar .right a span{
+  font-size: 10px;
+}
+
+.wrapper1 .navbar .right ul li{
+  position: relative;
+}
+
+.wrapper1 .navbar .right ul li .dropdown{
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: none;
+}
+
+.wrapper1 .navbar .right ul li .dropdown .fas{
+  margin-right: 10px;
+}
+
+.wrapper1 .navbar .right ul li .dropdown:before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 10%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.wrapper1 .navbar .right ul li.active .dropdown{
+  display: block;
+}
+
+.center {
+    width: 100%;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="  background: #90e40a !important;">
+  <a class="navbar-brand" href="/authservice/Home">Loan Application</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-25" >
+      <li class="nav-item active">
+        <a class="nav-link" href="/authservice/loan" style="color:#fff !important; ;">Apply For Loan<span class="sr-only">(current)</span></a>
+      </li> 
+    </ul>
+  </div>
+</nav>
+<div class="wrapper">
+    <div class="sidebar">
+        <ul>
+       <li>
+      <img src="../images/user_auth_image/{{user.upload_image}}" class="rounded-circle" height="80" width="80" alt="">
+            <li><a href="/authservice/profile"><i class="fas fa-user"></i>My Profile</a></li>
+            <li><a href="/authservice/work"><i class="fas fa-business-time"></i>Work Info</a></li>
+            <li><a href="/authservice/address"><i class="fas fa-home"></i>Address</a></li>
+            <li><a href="/authservice/bankinfo"><i class="fas fa-money-check-alt"></i>Bank Info</a></li>
+            <li><a href="/authservice/documents"><i class="	fa fa-book"></i>Documents Requried</a></li>
+            <li><form action="/activities/delete" method="POST"><i class="fas fa-trash-alt">
+            <input type="submit" value="Delete Account"></i>
+            </form></li>
+            <li><a href="/authservice/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </div>
+        <div class="center" >
+            <form action="/activities/documents" method="POST" enctype="multipart/form-data">
+            <div class="col">
+              <h1><strong>Please Upload Carefully</strong></h1>
+            </div>
+                    <div class="col">
+                    <label for="col"><strong>Photo</strong></label>
+                    <input class="form-control" type="file" name="photo" accept=""/>
+                     <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.photo}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Aadhaar</strong></label>
+                    <div class="col">
+                    <label for="col"><strong>Front</strong></label>
+                    <input class="form-control" type="file" name="front" value="{{user3.aadhaar_front}}" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.aadhaar_front}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Back</strong></label>
+                    <input class="form-control" type="file" name="back" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.aadhaar_back}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Pan Card</strong></label>
+                    <input class="form-control" type="file" name="pan" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.pan_card}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Salary Slips</strong></label>
+                    <input class="form-control" type="file" name="salary" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.salary_slip}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Bank Statement</strong></label>
+                    <input class="form-control" type="file" name="bank" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.bank_statement}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Current Residential Proofs</strong></label>
+                    <div class="col">
+                    <label for="col"><strong>Current Residential proof</strong></label>
+                    <input class="form-control" type="file" name="residentail" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.residental_proof}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Utility Bills</strong></label>
+                    <input class="form-control" type="file" name="utility" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.utility_bill}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>TelePhone Bill</strong></label>
+                    <input class="form-control" type="file" name="telbill" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.telephone_bill}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Passport</strong></label>
+                    <input class="form-control" type="file" name="pass" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.passport}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Voter ID</strong></label>
+                    <input class="form-control" type="file" name="vot" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.voter_id}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Driving Lisence</strong></label>
+                    <input class="form-control" type="file" name="drive" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.driving_lisence}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Rental Agreement</strong></label>
+                    <input class="form-control" type="file" name="rent" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.rental_agreement}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Company HR letter</strong></label>
+                    <input class="form-control" type="file" name="comp" accept=""/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.company_hr}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    </div><br>
+            <input type="submit" value="Submit">
+            </form>
+  </div><br>      
+
+  </form>
+  </div>
+        
+</div>
+</body>
+</html>

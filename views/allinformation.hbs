@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+/*-------------------------------------*/
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.wrapper1{ 
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-20%,-20%);
+}
+
+.wrapper1 .navbar{
+  background: white;
+  display: grid;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wrapper1 .navbar ul li a{
+  color: #644def;
+}
+
+.wrapper1 .navbar .left ul,
+.wrapper1 .navbar .right ul li a{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.wrapper1 .navbar .left ul li,
+.wrapper1 .navbar .right img{
+  margin: 0 10px;
+}
+
+.wrapper1 .navbar .right a{
+  text-align: right;
+}
+
+.wrapper1 .navbar .right a span{
+  font-size: 10px;
+}
+
+.wrapper1 .navbar .right ul li{
+  position: relative;
+}
+
+.wrapper1 .navbar .right ul li .dropdown{
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: none;
+}
+
+.wrapper1 .navbar .right ul li .dropdown .fas{
+  margin-right: 10px;
+}
+
+.wrapper1 .navbar .right ul li .dropdown:before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 10%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.wrapper1 .navbar .right ul li.active .dropdown{
+  display: block;
+}
+.row{
+  position: absolute;
+  left: 1250px;
+  top: 1200px;
+}
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="   background: #90e40a !important;">
+  <a class="navbar-brand" href="/authservice/home">Loan Application</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-25" >
+        <h2 style="color: cornsilk;">Information</h2>
+    </ul>
+  </div>
+</nav>
+<div class="col">
+    <label for="col"><h1>Personal Information</h1></label>
+    <a href="/authservice/profile" type="button" class="ml-auto"><i class="fa fa-pencil" style="font-size: large;"></i></a>   
+<div class="wrapper">
+          <div class="col">
+                    <label for="col">Email</label>
+                    <input type="email" class="col" id="exampleInputPassword1" value="{{user.email}}" name="email" disabled><br>
+                  </div><br>
+
+                <div class="col">
+                    <label for="col">Full Name:</label>
+                    <input type="text" class="col" id="exampleInputPassword1" value="{{user.user_fullname}}" name="fullname" placeholder="Enter Full name" disabled>
+                  </div><br>
+                  <div class="col" >
+    <label for="exampleSelect2">Gender</label>
+    <select name="gender" class="col" id="exampleSelect2" disabled>
+      <option>{{user.user_gender}}</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div><br>
+     <div class="col">
+    <label for="exampleInputPassword1">Date Of Birth</label>
+    <input type="date" class="col" id="exampleInputPassword1" value="{{user.date_of_birth}}" name="date2" disabled>
+  </div><br>
+      <div class="col" >
+    <label for="exampleSelect2">Education Qualification</label>
+    <select name="education" class="col" id="exampleSelect2" disabled>
+      <option>{{user.education_qualification}}</option>
+      <option>PostGraducate</option>
+      <option>Graducate</option>
+      <option>Undergraducate</option>
+    </select>
+  </div><br>
+        <div class="col" >
+    <label for="exampleSelect2">Onwer Ship</label>
+    <select name="owner" class="col" id="exampleSelect2" disabled>
+      <option>{{user.owner_ship}}</option>
+      <option>Company-provoided</option>
+      <option>Owned</option>
+      <option>Rented</option>
+      <option>Other</option>
+    </select>
+  </div><br>
+                  <div class="col">
+                    <label for="col">Pin Code:</label>
+                    <input type="number" class="col" id="exampleInputPassword1" value="{{user.user_pincode}}" name="pin" disabled>
+                  </div><br>
+                  <div class="col">
+                    <label for="col">City</label>
+                    <input type="text" class="col" id="exampleInputPassword1" value="{{user.city}}" name="city" disabled>
+                  </div><br>   
+  </div>
+      </div><br> 
+      <div class="col">
+    <label for="col"><h1>Work Information</h1></label>
+    <a href="/authservice/work" type="button" class="ml-auto"><i class="fa fa-pencil" style="font-size: large;"></i></a>
+               <div class="wrapper">
+            <div class="col" >
+    <label for="exampleSelect2">Employe Type</label>
+    <select name="emp" class="col" id="exampleSelect2" disabled>
+      <option>{{user.employement_type}}</option>
+      <option>salaried-full-time</option>
+      <option>UnEmploye</option>
+      <option>Self-Employe</option>
+    </select>
+  </div><br>      
+<div class="col">
+                    <label for="col">Employee Name</label>
+                    <input type="text" class="col" id="exampleInputPassword1" value="{{user.employe_name}}" name="employe" disabled>
+                  </div><br>
+                 <div class="col">
+    <label for="exampleInputPassword1">Working Since</label>
+    <input type="date" class="col" id="exampleInputPassword1" value="{{user.work_date}}" name="date1"   placeholder="Enter Languages" disabled>
+  </div><br>      
+            <div class="col" >
+    <label for="exampleSelect2">Disignation</label>
+    <select name="disignation" class="col" id="exampleSelect2" disabled>
+      <option>{{user.disignation}}</option>
+      <option>Executive</option>
+      <option>Middle Management</option>
+      <option>Sr.Management</option>
+      <option>Leadership role</option>
+    </select>
+  </div><br>
+            <div class="col" >
+    <label for="exampleSelect2">Salary Received type</label>
+    <select name="salary" class="col" id="exampleSelect2" disabled>
+      <option>{{user.salary_type}}</option>
+      <option>Cash</option>
+      <option>Cheque</option>
+      <option>Direct Account Transfer</option>
+    </select>
+  </div><br>
+  <div class="col">
+    <label for="exampleInputPassword1">Net Montly Salary</label>
+    <input type="number" class="col" id="exampleInputPassword1" value="{{user.net_salary}}" name="month" disabled>
+  </div><br>      
+  </div>
+</div><br>
+        <div class="col">
+    <label for="col"><h1>Address Information</h1></label>
+    <a href="/authservice/address" type="button" class="ml-auto"><i class="fa fa-pencil" style="font-size: large;"></i></a>
+    <div class="wrapper">
+                    <div class="col">
+                    <label for="col"><strong>Current Address</strong></label>
+                  </div><br>
+                  <div class="col">
+                      <label for="col">Flat NO./Street NO</label>
+                      <input type="number" class="col" id="exampleInputPassword1" value="{{user1.flate_no}}" name="flatno" disabled>
+                  </div><br>
+                  <div class="col">
+                      <label for="col">Area/ Locality</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.area}}" name="area" disabled>
+                  </div><br>
+                   <div class="col">
+                      <label for="col">Town/Village/Ward No</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.town}}" name="town" disabled>
+                  </div><br>
+                  <div class="col">
+                      <label for="col">State</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.state}}" name="state" disabled>
+                  </div><br>
+                                     <div class="col">
+                      <label for="col">District</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.district}}" name="district" disabled>
+                  </div><br>
+                                     <div class="col">
+                      <label for="col">Postal /Zip code</label>
+                      <input type="number" class="col" id="exampleInputPassword1" value="{{user1.zip}}" name="postals" disabled>
+                  </div>
+                      <div class="wrapper" style="position: absolute; top: 100px;">
+                  <div class="col">
+                    <label for="col"><strong>Permament Address</strong></label>
+                  </div><br>
+                                    <div class="col">
+                      <label for="col">Flat NO./Street NO</label>
+                      <input type="number" class="col" id="exampleInputPassword1" value="{{user1.p_flate_no}}" name="flatno1" disabled>
+                  </div><br>
+                  <div class="col">
+                      <label for="col">Area/ Locality</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.p_area}}" name="area1" disabled>
+                  </div><br>
+                   <div class="col">
+                      <label for="col">Town/Village/Ward No</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.p_town}}" name="town1" disabled>
+                  </div><br>
+                  <div class="col">
+                      <label for="col">State</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.p_state}}" name="state1" disabled>
+                  </div><br>
+                                     <div class="col">
+                      <label for="col">District</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user1.district}}" name="district1" disabled>
+                  </div><br>
+                                     <div class="col">
+                      <label for="col">Postal /Zip code</label>
+                      <input type="number" class="col" id="exampleInputPassword1" value="{{user1.p_zip}}" name="postals1" disabled>
+                  </div><br>
+                  </div>
+    </div><br><br>
+     </div><br><br>
+          <div class="col">
+    <label for="col"><h1>Bank Information</h1></label>
+    <a href="/authservice/bankinfo" type="button" class="ml-auto"><i class="fa fa-pencil" style="font-size: large;"></i></a>
+     <div class="wrapper">
+                  <div class="col">
+                      <label for="col">Bank Name:</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user2.bank_name}}" name="bank" disabled>
+                  </div><br>
+                  <div class="col">
+                      <label for="col">Account Number:</label>
+                      <input type="number" class="col" id="exampleInputPassword1" value="{{user2.account_no}}" name="account" disabled>
+                  </div><br>           
+                   <div class="col">
+                      <label for="col">IFSC Code</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user2.ifsc_code}}" name="ifsc" disabled>
+                  </div><br> 
+                  <div class="col">
+                      <label for="col">UPI</label>
+                      <input type="text" class="col" id="exampleInputPassword1" value="{{user2.upi}}" name="upi" disabled>
+                  </div><br>
+  </div><br>
+</div>
+ <div class="col">
+    <label for="col"><h1>Documents Information</h1></label>
+    <a href="/authservice/documents" type="button" class="ml-auto"><i class="fa fa-pencil" style="font-size: large;"></i></a>
+    <div class="wrapper">
+                    <div class="col">
+                    <label for="col"><strong>Photo</strong></label>
+                    <input class="form-control" type="file" name="photo" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.photo}}" class="rounded-circle" height="80" width="80" alt="" di>
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Front</strong></label>
+                    <input class="form-control" type="file" name="front" value="{{user3.aadhaar_front}}" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.aadhaar_front}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Back</strong></label>
+                    <input class="form-control" type="file" name="back" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.aadhaar_back}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Pan Card</strong></label>
+                    <input class="form-control" type="file" name="pan" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.pan_card}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Salary Slips</strong></label>
+                    <input class="form-control" type="file" name="salary" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.salary_slip}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Bank Statement</strong></label>
+                    <input class="form-control" type="file" name="bank" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.bank_statement}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Current Residential proof</strong></label>
+                    <input class="form-control" type="file" name="residentail" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.residental_proof}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br><br>
+                    <div class="wrapper" style="position: absolute; top: 200px;">
+                    <div class="col">
+                    <label for="col"><strong>Utility Bills</strong></label>
+                    <input class="form-control" type="file" name="utility" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.utility_bill}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>TelePhone Bill</strong></label>
+                    <input class="form-control" type="file" name="telbill" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.telephone_bill}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Passport</strong></label>
+                    <input class="form-control" type="file" name="pass" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.passport}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Voter ID</strong></label>
+                    <input class="form-control" type="file" name="vot" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.voter_id}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Driving Lisence</strong></label>
+                    <input class="form-control" type="file" name="drive" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.driving_lisence}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Rental Agreement</strong></label>
+                    <input class="form-control" type="file" name="rent" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.rental_agreement}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+                    <div class="col">
+                    <label for="col"><strong>Company HR letter</strong></label>
+                    <input class="form-control" type="file" name="comp" accept="" disabled/>
+                    <img src="../images/documents/{{user.user_fullname}} Loan Documents/{{user3.company_hr}}" class="rounded-circle" height="80" width="80" alt="">
+                    </div><br>
+  </div>
+ </div>
+ </div>
+     <div class="row">
+   <a href="/authservice/Home" class="btn btn-success">Submit</a>
+ </div>
+</body>
+</html>
